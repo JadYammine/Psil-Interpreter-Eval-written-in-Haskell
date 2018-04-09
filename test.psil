@@ -1,0 +1,28 @@
+0
++
+>
+true
+(if false false 0)
+(if (> 7 3) 1 true)
+(cons deux)
+(cons trois 3)
+(case (cons quatre 4 1) ((quatre x y) (* x y)))
+(case (cons cinq 2 3) ((autre) 0) (_ 5))
+(case (< 0 1) (_ 6) ((true) 0))
+
+(lambda (x) x)
+(lambda (a b c d e) 0)
+
+((lambda (a b c d e) (if a (b c d) e)) true + 1 2 (lambda (x) x))
+(((lambda (a b c d e) (if a (b c d) e)) false + 1 2 (lambda (x) x)) 4)
+(dlet ((y 2) (x 3)) (+ x y))
+(slet ((y 2) (x 4)) (+ x y))
+(dlet (((f x) (+ x 1)) ((g x) (* x 3))) (f (g 2)))
+(slet (((f x) (- x 1)) ((g x) (* x 3))) (f (g 3)))
+(slet (((f x) (+ x 1)) ((f x) (f (* x 4)))) (f 2))
+
+(((lambda (x) (lambda (y) (* y x))) 2) 5)
+
+;Travail fait par:
+;Jad Yammine 1067212
+;Annie-Pier Coulombe 20000419
